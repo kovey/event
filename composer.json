@@ -1,0 +1,30 @@
+{
+    "name": "kovey/event",
+    "type": "library",
+    "description": "Event Of The Kovey Framework",
+    "keywords": [
+        "framework",
+        "kovey",
+        "event",
+        "php"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Kovey",
+            "email": "kovey@vip.qq.com",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kovey\\Event\\": "src/"
+        }
+    }
+}
