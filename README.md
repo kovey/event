@@ -1,7 +1,7 @@
-## Kovey Framework Http Server
+## Kovey Framework Event
 #### Description
-###### Http Server Base On Swoole
+###### Event Manager
 ###### Usage:
-    - composer require kovey/http-server
+    - composer require kovey/event
 ###### Run All Test:
     - php /path/to/tests/test.php --bootstrap=/path/to/vendor/autoload.php /path/to/tests
