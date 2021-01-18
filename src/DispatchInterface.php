@@ -29,5 +29,5 @@ interface DispatchInterface
      *
      * @return mixed
      */
-    public function dispatchWithReturn(EventInterface $event);
+    public function dispatchWithReturn(EventInterface $event) : mixed;
 }

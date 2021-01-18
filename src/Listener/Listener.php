@@ -52,7 +52,7 @@ class Listener implements ListenerInterface
      * 
      * @return mixed
      */
-    public function trigger(EventInterface $event)
+    public function trigger(EventInterface $event) : mixed
     {
         if (!isset($this->callbacks[$event::class])) {
             throw new EventException(sprintf('%s is not listen.', $event::class));

@@ -46,7 +46,7 @@ class Dispatch implements DispatchInterface
      *
      * @return mixed
      */
-    public function dispatchWithReturn(EventInterface $event)
+    public function dispatchWithReturn(EventInterface $event) : mixed
     {
         return $this->listenerProvider->getFirstListener($event)->trigger($event);
     }

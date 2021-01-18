@@ -25,7 +25,7 @@ interface ListenerInterface
      * 
      * @return mixed
      */
-    public function trigger(EventInterface $event);
+    public function trigger(EventInterface $event) : mixed;
 
     /**
      * @description add event
