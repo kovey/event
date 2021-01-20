@@ -13,6 +13,11 @@ namespace Kovey\Event;
 
 class Dispatch implements DispatchInterface
 { 
+    /**
+     * @description listener provider
+     *
+     * @var ListenerProviderInterface
+     */
     private ListenerProviderInterface $listenerProvider;
 
     public function __construct(ListenerProviderInterface $listenerProvider)

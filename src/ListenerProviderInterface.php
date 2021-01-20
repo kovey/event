@@ -21,7 +21,7 @@ interface ListenerProviderInterface
     public function getListeners(EventInterface $event) : Array;
 
     /**
-     * @description get first listeners
+     * @description get first listener
      * 
      * @return ListenerInterface
      */

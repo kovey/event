@@ -41,7 +41,7 @@ class ListenerProvider implements ListenerProviderInterface
     }
 
     /**
-     * @description get first listeners
+     * @description get first listener
      * 
      * @return ListenerInterface
      */
@@ -56,7 +56,7 @@ class ListenerProvider implements ListenerProviderInterface
     }
 
     /**
-     * @description add listeners
+     * @description add listener
      * 
      * @return ListenerProviderInterface
      */
