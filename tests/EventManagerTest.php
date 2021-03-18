@@ -35,6 +35,13 @@ class EventManagerTest extends TestCase
             $run2 = $event->getName();
         });
 
+        $this->assertTrue($eventManager->listened('test'));
+        $this->assertTrue($eventManager->listened('test2'));
+        $this->assertFalse($eventManager->listened('test1'));
+
+        $this->assertTrue($eventManager->listenedByClass(Event::class));
+        $this->assertFalse($eventManager->listenedByClass($eventManager::class));
+
         $event = new Event();
         $event->setName('kovey');
 
