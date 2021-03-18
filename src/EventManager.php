@@ -44,11 +44,19 @@ class EventManager
      */
     private Array $onEvents;
 
+    /**
+     * @description event class listened
+     *
+     * @var Array
+     */
+    private Array $onClassEvents;
+
     public function __construct(Array $events = array())
     {
         $this->provider = new ListenerProvider();
         $this->dispatch = new Dispatch($this->provider);
         $this->onEvents = array();
+        $this->onClassEvents = array();
         $this->events = $events;
     }
 
@@ -66,6 +74,7 @@ class EventManager
         $listener->addEvent($this->events[$type], $fun);
         $this->provider->addListener($listener);
         $this->onEvents[$type] = 1;
+        $this->onClassEvents[$this->events[$type]] = 1;
 
         return $this;
     }
@@ -92,5 +101,10 @@ class EventManager
         }
 
         return $this;
+    }
+
+    public function listenedByClass(string $class) : bool
+    {
+        return isset($this->onClassEvents[$class]);
     }
 }
